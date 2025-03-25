@@ -5,11 +5,11 @@ export default function Sidebar({isOpen,toggleSidebar}){
     return(
        <aside className={`fixed left-0 top-0 h-screen w-64 bg-gray-800 transition-transform duration-300 ${isOpen? "translate-x-0":"-translate-x-full"}lg:translate-x-0`}>
         <div className="flex items-center justify-between p-4 text-white">
-        <span className="text-xl font-bold">SHOP</span>
+        <span className="text-xl font-bold flex gap-3"><BsCart3/>STORE</span>
         <button className="text-red-500 lg:hidden" onClick={toggleSidebar}></button>
         </div>
 
-        <ul>
+        <ul className="space-y-6 p-4">
         {[
           { icon: BsGrid1X2Fill, text: "Dashboard" },
           { icon: BsFillArchiveFill, text: "Products" },
